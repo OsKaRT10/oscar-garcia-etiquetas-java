@@ -20,7 +20,9 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
 
-        if (args.length == 1) {
+	try {
+       
+	 if (args.length == 1) {
             int caras = Integer.parseInt(args[0]);
             main.carasDado(caras);
         } else if (args.length == 2) {
@@ -30,6 +32,11 @@ public class Main {
         } else {
             System.out.println("Por favor, introduce 1 o 2 argumentos.");
         }
+	} catch (numberFormatException e) {
+		System.out.println("Error");
+	}catch (Exception e) {
+		System.out.println("Error inesperado");
+   	}
     }
 }
 
