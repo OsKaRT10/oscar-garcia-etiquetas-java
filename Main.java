@@ -1,7 +1,14 @@
+import java.util.Random;
+
 public class Main {
-	public static void main (String[]args)
-		if (args.length == 0)
-			System.out.println("No hay argumentos")
-		} else {
-			System.out.println("hay " + args.length() + "argumentos");
+	public void carasDado(int caras) {
+	Random random = new Random();
+	int result = random.nextInt(caras) +1;
+		System.out.println("El dado tiene " + caras +  "caras. ");
 		}
+
+	public static void main (String[] args) {
+		Main main = new Main();
+		main.carasDado(6);
+		}
+	}
